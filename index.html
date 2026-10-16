@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlink Authorized US Dealer | High-Speed Satellite Internet</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-weight='bold' fill='%23FFFFFF'>S</text></svg>">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        starlinkDark: '#0A0A0A',
+                        starlinkCard: '#161618',
+                        starlinkGray: '#86868B',
+                        starlinkAccent: '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-starlinkDark text-starlinkAccent font-sans antialiased selection:bg-white selection:text-black">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="bg-starlinkDark/90 backdrop-blur-md border-b border-neutral-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <!-- Brand / Logo -->
+                <div class="flex flex-col">
+                    <span class="text-xl sm:text-2xl font-black tracking-widest uppercase">STARLINK</span>
+                    <span class="text-[8px] sm:text-[10px] text-starlinkGray tracking-widest font-semibold uppercase">Authorized Reseller</span>
+                </div>
+                <nav class="hidden md:flex items-center gap-6 text-xs font-medium text-neutral-300 ml-8">
+                    <a href="#residential" class="hover:text-white transition">Residential</a>
+                    <a href="#roam" class="hover:text-white transition">Roam / RV</a>
+                    <a href="#business" class="hover:text-white transition">Business</a>
+                    <a href="#specs" class="hover:text-white transition">Hardware</a>
+                </nav>
+            </div>
+            <div>
+                <a href="tel:+448009871212" class="bg-white hover:bg-neutral-200 text-black px-4 sm:px-6 py-2.5 rounded-full text-xs font-bold transition flex items-center gap-2 shadow-sm whitespace-nowrap">
+                    📞 0800 987 1212
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION WITH BACKGROUND IMAGE -->
+    <section class="relative min-h-[85vh] flex items-center justify-center text-center px-4 py-20 bg-cover bg-center bg-no-repeat overflow-hidden" 
+             style="background-image: url('solar-pro-fast-affordable-internet-starlink-banner.jpg');">
+        
+        <!-- SEMI-TRANSPARENT OVERLAY FOR LEGIBILITY -->
+        <div class="absolute inset-0 bg-slate-950/65 backdrop-blur-[2px]"></div>
+
+        <div class="max-w-4xl mx-auto relative z-10 space-y-6">
+            <span class="text-xs font-bold tracking-widest uppercase bg-neutral-900/90 border border-neutral-700/80 px-4 py-1.5 rounded-full text-neutral-200 shadow-md">
+                High-Speed Internet • Available Almost Anywhere on Earth
+            </span>
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight leading-tight text-white drop-shadow-md">
+                Connect from anywhere. <br>Stream without limits.
+            </h1>
+            <p class="text-base sm:text-lg text-neutral-200 max-w-2xl mx-auto font-medium drop-shadow">
+                High-speed, low-latency broadband engineered for remote locations, homes, vehicles, and enterprise networks. Order through our authorized dealer network today.
+            </p>
+
+            <!-- ADDRESS CHECKER / ACTION BOX -->
+            <div class="max-w-xl mx-auto bg-neutral-900/90 border border-neutral-700 p-3 sm:p-4 rounded-2xl shadow-2xl flex flex-col sm:flex-row gap-3 mt-8">
+                <input type="text" placeholder="Enter your service address or postcode..." class="bg-black/80 border border-neutral-700 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-400 focus:outline-none focus:border-white flex-grow">
+                <a href="tel:+448009871212" class="bg-white hover:bg-neutral-200 text-black font-bold px-6 py-3 rounded-xl text-sm transition whitespace-nowrap flex items-center justify-center gap-2 shadow-md">
+                    Check Availability
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE PACKAGES GRID -->
+    <section id="residential" class="max-w-7xl mx-auto px-4 sm:px-6 py-20">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-xs font-bold text-starlinkGray uppercase tracking-widest">Designed for your lifestyle</h2>
+            <p class="text-3xl sm:text-4xl font-black mt-2">Choose your Starlink plan</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- RESIDENTIAL -->
+            <div class="bg-starlinkCard border border-neutral-800 rounded-3xl p-8 flex flex-col justify-between hover:border-neutral-700 transition">
+                <div>
+                    <span class="text-xs font-bold text-neutral-400 uppercase tracking-widest">Residential</span>
+                    <h3 class="text-2xl font-black mt-2">Standard Home</h3>
+                    <p class="text-sm text-starlinkGray mt-2">Unlimited high-speed, low-latency internet for households and fixed locations.</p>
+                    <ul class="my-6 space-y-3 text-xs text-neutral-300">
+                        <li class="flex items-center gap-2">✓ High-speed download & streaming</li>
+                        <li class="flex items-center gap-2">✓ Standard actuated hardware included</li>
+                        <li class="flex items-center gap-2">✓ Zero data caps or throttling</li>
+                    </ul>
+                </div>
+                <div class="pt-6 border-t border-neutral-800">
+                    <a href="tel:+448009871212" class="w-full bg-white hover:bg-neutral-200 text-black font-bold py-3.5 rounded-xl text-xs transition flex items-center justify-center gap-2">
+                        📞 Order Now: 0800 987 1212
+                    </a>
+                </div>
+            </div>
+
+            <!-- ROAM / RV -->
+            <div id="roam" class="bg-starlinkCard border border-neutral-800 rounded-3xl p-8 flex flex-col justify-between hover:border-neutral-700 transition relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-white text-black text-[9px] font-extrabold uppercase px-3 py-1 rounded-bl-xl tracking-widest">Popular</div>
+                <div>
+                    <span class="text-xs font-bold text-neutral-400 uppercase tracking-widest">Roam / RV</span>
+                    <h3 class="text-2xl font-black mt-2">Mobile & Travel</h3>
+                    <p class="text-sm text-starlinkGray mt-2">Connect on land anywhere Starlink has active coverage. Ideal for RVs, campers, and nomads.</p>
+                    <ul class="my-6 space-y-3 text-xs text-neutral-300">
+                        <li class="flex items-center gap-2">✓ Pause and unpause service anytime</li>
+                        <li class="flex items-center gap-2">✓ Use while in motion or stationary</li>
+                        <li class="flex items-center gap-2">✓ Portable mini or standard kit</li>
+                    </ul>
+                </div>
+                <div class="pt-6 border-t border-neutral-800">
+                    <a href="tel:+448009871212" class="w-full bg-white hover:bg-neutral-200 text-black font-bold py-3.5 rounded-xl text-xs transition flex items-center justify-center gap-2">
+                        📞 Order Now: 0800 987 1212
+                    </a>
+                </div>
+            </div>
+
+            <!-- BUSINESS -->
+            <div id="business" class="bg-starlinkCard border border-neutral-800 rounded-3xl p-8 flex flex-col justify-between hover:border-neutral-700 transition">
+                <div>
+                    <span class="text-xs font-bold text-neutral-400 uppercase tracking-widest">Enterprise</span>
+                    <h3 class="text-2xl font-black mt-2">Business & Priority</h3>
+                    <p class="text-sm text-starlinkGray mt-2">High bandwidth and priority network access for businesses, remote offices, and backup connectivity.</p>
+                    <ul class="my-6 space-y-3 text-xs text-neutral-300">
+                        <li class="flex items-center gap-2">✓ High throughput & priority support</li>
+                        <li class="flex items-center gap-2">✓ Public IPv4 routing included</li>
+                        <li class="flex items-center gap-2">✓ Enterprise-grade hardware options</li>
+                    </ul>
+                </div>
+                <div class="pt-6 border-t border-neutral-800">
+                    <a href="tel:+448009871212" class="w-full bg-white hover:bg-neutral-200 text-black font-bold py-3.5 rounded-xl text-xs transition flex items-center justify-center gap-2">
+                        📞 Order Now: 0800 987 1212
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- HARDWARE SPECS -->
+    <section id="specs" class="bg-starlinkCard border-y border-neutral-800 py-20 px-4 sm:px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-xs font-bold text-starlinkGray uppercase tracking-widest">Hardware Engineering</span>
+                <h2 class="text-3xl sm:text-4xl font-black tracking-tight">Designed to withstand the elements.</h2>
+                <p class="text-starlinkGray text-sm sm:text-base leading-relaxed">
+                    Starlink hardware is self-orienting and designed to install in minutes. It can withstand extreme cold, heat, hail, sleet, heavy rain, and gale-force winds.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-4">
+                    <div>
+                        <p class="text-2xl font-black">Weatherproof</p>
+                        <p class="text-xs text-starlinkGray mt-1">IP56 rated for extreme climates</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-black">Easy Setup</p>
+                        <p class="text-xs text-starlinkGray mt-1">Plug-in and point to the sky</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-black border border-neutral-800 rounded-3xl p-8 text-center space-y-6">
+                <div class="w-16 h-16 bg-neutral-900 border border-neutral-800 text-white rounded-2xl flex items-center justify-center mx-auto text-2xl">
+                    🛰️
+                </div>
+                <h3 class="text-xl font-bold">Ready to get connected?</h3>
+                <p class="text-xs text-starlinkGray">Speak with an authorized support agent to check coverage at your exact location and place your hardware order.</p>
+                <a href="tel:+448009871212" class="block w-full bg-white hover:bg-neutral-200 text-black font-bold py-4 rounded-xl text-sm transition">
+                    📞 Call 0800 987 1212
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-starlinkDark text-starlinkGray py-12 text-xs border-t border-neutral-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-4">
+            <p class="text-neutral-300 font-bold text-sm">Independent Authorized Reseller Notice</p>
+            <p class="leading-relaxed">
+                This portal is operated by an independent Authorized Reseller of Starlink distribution and broadband hardware services. All phone inquiries and orders are directed to independent support for activation, shipping inquiries, and plan selection.
+            </p>
+            <p class="leading-relaxed">
+                Starlink and associated marks are trademarks of SpaceX / Starlink. Used here under reseller representation guidelines.
+            </p>
+            <div class="flex gap-6 pt-2 font-medium text-neutral-400">
+                <a href="privacy-and-cookies.html" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition">Terms of Service</a>
+            </div>
+            <p class="pt-4 border-t border-neutral-900 text-neutral-600">
+                © 2026 Authorized Starlink Reseller Portal. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- INSTANT CALL POP-UP MODAL -->
+    <div id="support-popup" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-starlinkCard border border-neutral-800 rounded-3xl max-w-md w-full p-6 sm:p-8 text-center relative shadow-2xl transform scale-95 transition-transform duration-300" id="popup-content">
+            <button onclick="closePopup()" class="absolute top-4 right-4 text-neutral-400 hover:text-white font-bold text-xl p-2">&times;</button>
+            <div class="w-12 h-12 bg-neutral-900 border border-neutral-800 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                📞
+            </div>
+            <span class="text-xs font-bold text-neutral-400 uppercase tracking-widest">Instant Assistance</span>
+            <h3 class="text-xl sm:text-2xl font-black mt-2 mb-3">
+                Order Starlink with an Agent
+            </h3>
+            <p class="text-xs sm:text-sm text-starlinkGray mb-6">
+                Want to confirm hardware availability, shipping timelines, or plan options? Call our dedicated support line now.
+            </p>
+            <a href="tel:+448009871212" class="w-full bg-white hover:bg-neutral-200 text-black font-bold py-4 rounded-2xl text-sm sm:text-base transition shadow-lg flex items-center justify-center gap-2 mb-3">
+                📞 0800 987 1212
+            </a>
+            <button onclick="closePopup()" class="text-xs text-neutral-505 hover:text-neutral-300 underline">
+                Continue browsing site
+            </button>
+        </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const popup = document.getElementById('support-popup');
+                const content = document.getElementById('popup-content');
+                if(popup && content) {
+                    popup.classList.remove('opacity-0', 'pointer-events-none');
+                    content.classList.remove('scale-95');
+                }
+            }, 2000);
+        });
+        function closePopup() {
+            const popup = document.getElementById('support-popup');
+            const content = document.getElementById('popup-content');
+            if(popup && content) {
+                popup.classList.add('opacity-0', 'pointer-events-none');
+                content.classList.add('scale-95');
+            }
+        }
+    </script>
+
+</body>
+</html>
