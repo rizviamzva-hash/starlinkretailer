@@ -16,7 +16,7 @@
                 extend: {
                     colors: {
                         starlinkDark: '#0A0A0A',
-                        starlinkCard: '#161618',
+                        starlinkCard: '#121214',
                         starlinkGray: '#86868B',
                         starlinkAccent: '#FFFFFF'
                     }
@@ -27,160 +27,261 @@
 </head>
 <body class="bg-starlinkDark text-starlinkAccent font-sans antialiased selection:bg-white selection:text-black">
 
-    <!-- HEADER / NAVBAR -->
-    <header class="bg-starlinkDark/90 backdrop-blur-md border-b border-neutral-800 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <!-- Brand / Logo -->
-                <div class="flex flex-col">
-                    <span class="text-xl sm:text-2xl font-black tracking-widest uppercase">STARLINK</span>
-                    <span class="text-[8px] sm:text-[10px] text-starlinkGray tracking-widest font-semibold uppercase">Authorized Reseller</span>
-                </div>
-                <nav class="hidden md:flex items-center gap-6 text-xs font-medium text-neutral-300 ml-8">
-                    <a href="#residential" class="hover:text-white transition">Residential</a>
-                    <a href="#roam" class="hover:text-white transition">Roam / RV</a>
-                    <a href="#business" class="hover:text-white transition">Business</a>
-                    <a href="#specs" class="hover:text-white transition">Hardware</a>
+    <!-- HEADER / NAVBAR (Section 1) -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
+            <div class="flex items-center gap-8">
+                <!-- Brand Logo -->
+                <a href="#" class="text-xl sm:text-2xl font-black tracking-widest uppercase text-white">STARLINK</a>
+                <!-- Nav Links -->
+                <nav class="hidden lg:flex items-center gap-6 text-xs font-medium text-neutral-300">
+                    <a href="#" class="hover:text-white transition">Personal</a>
+                    <a href="#" class="hover:text-white transition">Business</a>
+                    <a href="#" class="hover:text-white transition">Learn</a>
+                    <a href="#" class="hover:text-white transition">Support</a>
+                    <a href="#" class="hover:text-white transition">Company</a>
+                    <a href="#" class="hover:text-white transition">Shop</a>
                 </nav>
             </div>
-            <div>
-                <a href="tel:+448009871212" class="bg-white hover:bg-neutral-200 text-black px-4 sm:px-6 py-2.5 rounded-full text-xs font-bold transition flex items-center gap-2 shadow-sm whitespace-nowrap">
-                    📞 0800 987 1212
+            <div class="flex items-center gap-4">
+                <a href="tel:+448009871212" class="text-xs font-semibold text-white hover:text-neutral-300 transition whitespace-nowrap">
+                    Call 0800 987 1212
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- HERO SECTION WITH starlink-BG.png BACKGROUND -->
-    <section class="relative min-h-[85vh] flex items-center justify-center text-center px-4 py-20 bg-cover bg-center bg-no-repeat overflow-hidden" 
+    <!-- HERO SECTION (Section 1) -->
+    <section class="relative min-h-screen flex flex-col justify-end px-4 sm:px-12 pb-16 pt-28 bg-cover bg-center bg-no-repeat overflow-hidden" 
              style="background-image: url('starlink-BG.png');">
         
-        <!-- SEMI-TRANSPARENT OVERLAY FOR LEGIBILITY -->
-        <div class="absolute inset-0 bg-slate-950/65 backdrop-blur-[2px]"></div>
+        <!-- Dark Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent pointer-events-none"></div>
 
-        <div class="max-w-4xl mx-auto relative z-10 space-y-6">
-            <span class="text-xs font-bold tracking-widest uppercase bg-neutral-900/90 border border-neutral-700/80 px-4 py-1.5 rounded-full text-neutral-200 shadow-md">
-                High-Speed Internet • Available Almost Anywhere on Earth
-            </span>
-            <h1 class="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight leading-tight text-white drop-shadow-md">
-                Connect from anywhere. <br>Stream without limits.
-            </h1>
-            <p class="text-base sm:text-lg text-neutral-200 max-w-2xl mx-auto font-medium drop-shadow">
-                High-speed, low-latency broadband engineered for remote locations, homes, vehicles, and enterprise networks. Order through our authorized dealer network today.
-            </p>
-
-            <!-- ZIP CODE CHECKER BOX -->
-            <div class="max-w-xl mx-auto bg-neutral-900/90 border border-neutral-700 p-3 sm:p-4 rounded-2xl shadow-2xl flex flex-col sm:flex-row gap-3 mt-8">
-                <input type="text" id="zip-input" placeholder="Enter your zip code..." class="bg-black/80 border border-neutral-700 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-400 focus:outline-none focus:border-white flex-grow">
-                <button onclick="checkZipCode()" class="bg-white hover:bg-neutral-200 text-black font-bold px-6 py-3 rounded-xl text-sm transition whitespace-nowrap flex items-center justify-center gap-2 shadow-md cursor-pointer">
-                    Check Availability
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICE PACKAGES GRID -->
-    <section id="residential" class="max-w-7xl mx-auto px-4 sm:px-6 py-20">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <h2 class="text-xs font-bold text-starlinkGray uppercase tracking-widest">Designed for your lifestyle</h2>
-            <p class="text-3xl sm:text-4xl font-black mt-2">Choose your Starlink plan</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="max-w-7xl w-full mx-auto relative z-10 space-y-6">
             
-            <!-- RESIDENTIAL -->
-            <div class="bg-starlinkCard border border-neutral-800 rounded-3xl p-8 flex flex-col justify-between hover:border-neutral-700 transition">
-                <div>
-                    <span class="text-xs font-bold text-neutral-400 uppercase tracking-widest">Residential</span>
-                    <h3 class="text-2xl font-black mt-2">Standard Home</h3>
-                    <p class="text-sm text-starlinkGray mt-2">Unlimited high-speed, low-latency internet for households and fixed locations.</p>
-                    <ul class="my-6 space-y-3 text-xs text-neutral-300">
-                        <li class="flex items-center gap-2">✓ High-speed download & streaming</li>
-                        <li class="flex items-center gap-2">✓ Standard actuated hardware included</li>
-                        <li class="flex items-center gap-2">✓ Zero data caps or throttling</li>
-                    </ul>
-                </div>
-                <div class="pt-6 border-t border-neutral-800">
-                    <a href="tel:+448009871212" class="w-full bg-white hover:bg-neutral-200 text-black font-bold py-3.5 rounded-xl text-xs transition flex items-center justify-center gap-2">
-                        📞 Order Now: 0800 987 1212
-                    </a>
-                </div>
-            </div>
+            <!-- Headline -->
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-white">
+                Fast, affordable internet
+            </h1>
 
-            <!-- ROAM / RV -->
-            <div id="roam" class="bg-starlinkCard border border-neutral-800 rounded-3xl p-8 flex flex-col justify-between hover:border-neutral-700 transition relative overflow-hidden">
-                <div class="absolute top-0 right-0 bg-white text-black text-[9px] font-extrabold uppercase px-3 py-1 rounded-bl-xl tracking-widest">Popular</div>
-                <div>
-                    <span class="text-xs font-bold text-neutral-400 uppercase tracking-widest">Roam / RV</span>
-                    <h3 class="text-2xl font-black mt-2">Mobile & Travel</h3>
-                    <p class="text-sm text-starlinkGray mt-2">Connect on land anywhere Starlink has active coverage. Ideal for RVs, campers, and nomads.</p>
-                    <ul class="my-6 space-y-3 text-xs text-neutral-300">
-                        <li class="flex items-center gap-2">✓ Pause and unpause service anytime</li>
-                        <li class="flex items-center gap-2">✓ Use while in motion or stationary</li>
-                        <li class="flex items-center gap-2">✓ Portable mini or standard kit</li>
-                    </ul>
-                </div>
-                <div class="pt-6 border-t border-neutral-800">
-                    <a href="tel:+448009871212" class="w-full bg-white hover:bg-neutral-200 text-black font-bold py-3.5 rounded-xl text-xs transition flex items-center justify-center gap-2">
-                        📞 Order Now: 0800 987 1212
-                    </a>
-                </div>
-            </div>
+            <!-- Dynamic 70/30 Toggle Cards -->
+            <div class="flex flex-col lg:flex-row gap-6 max-w-6xl w-full items-stretch">
+                
+                <!-- CARD 1: AT HOME -->
+                <div id="card-home" onclick="switchTab('home')" class="cursor-pointer transition-all duration-500 ease-in-out rounded-3xl p-10 sm:p-12 border backdrop-blur-md flex flex-col justify-between bg-neutral-900/65 border-neutral-700/60 shadow-2xl w-full lg:w-[70%] min-h-[380px] sm:min-h-[420px]">
+                    <div>
+                        <h3 class="text-2xl sm:text-3xl font-black text-white">At Home</h3>
+                        <p class="text-sm text-neutral-300 mt-2">Reliable, high-speed home internet.</p>
+                    </div>
 
-            <!-- BUSINESS -->
-            <div id="business" class="bg-starlinkCard border border-neutral-800 rounded-3xl p-8 flex flex-col justify-between hover:border-neutral-700 transition">
-                <div>
-                    <span class="text-xs font-bold text-neutral-400 uppercase tracking-widest">Enterprise</span>
-                    <h3 class="text-2xl font-black mt-2">Business & Priority</h3>
-                    <p class="text-sm text-starlinkGray mt-2">High bandwidth and priority network access for businesses, remote offices, and backup connectivity.</p>
-                    <ul class="my-6 space-y-3 text-xs text-neutral-300">
-                        <li class="flex items-center gap-2">✓ High throughput & priority support</li>
-                        <li class="flex items-center gap-2">✓ Public IPv4 routing included</li>
-                        <li class="flex items-center gap-2">✓ Enterprise-grade hardware options</li>
-                    </ul>
+                    <div id="content-home" class="mt-8 transition-all duration-300">
+                        <div class="mb-6">
+                            <span class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest block">Residential Starting At</span>
+                            <span class="text-4xl font-black text-white">$55<span class="text-sm font-normal text-neutral-400">/mo</span></span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <input type="text" id="zip-home" placeholder="Address or Zip Code" class="bg-black/60 border border-neutral-700 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-400 focus:outline-none focus:border-white flex-grow" onclick="event.stopPropagation()">
+                            <button onclick="event.stopPropagation(); checkAvailability('home')" class="bg-white hover:bg-neutral-200 text-black font-bold px-6 py-3 rounded-xl text-sm transition whitespace-nowrap shadow-md cursor-pointer">
+                                Check Availability
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="pt-6 border-t border-neutral-800">
-                    <a href="tel:+448009871212" class="w-full bg-white hover:bg-neutral-200 text-black font-bold py-3.5 rounded-xl text-xs transition flex items-center justify-center gap-2">
-                        📞 Order Now: 0800 987 1212
-                    </a>
-                </div>
-            </div>
 
+                <!-- CARD 2: ON THE GO -->
+                <div id="card-roam" onclick="switchTab('roam')" class="cursor-pointer transition-all duration-500 ease-in-out rounded-3xl p-10 sm:p-12 border backdrop-blur-md flex flex-col justify-between bg-neutral-900/30 border-neutral-800/60 opacity-80 hover:opacity-100 shadow-xl w-full lg:w-[30%] min-h-[380px] sm:min-h-[420px]">
+                    <div>
+                        <h3 class="text-2xl sm:text-3xl font-black text-white">On the Go</h3>
+                        <p class="text-sm text-neutral-300 mt-2">Fast, reliable internet for travel, camping, boating, and more.</p>
+                    </div>
+
+                    <div id="content-roam" class="mt-8 transition-all duration-300 hidden">
+                        <div class="mb-6">
+                            <span class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest block">Roam Starting At</span>
+                            <span class="text-4xl font-black text-white">$55<span class="text-sm font-normal text-neutral-400">/mo</span></span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <input type="text" id="zip-roam" placeholder="Address or Zip Code" class="bg-black/60 border border-neutral-700 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-400 focus:outline-none focus:border-white flex-grow" onclick="event.stopPropagation()">
+                            <button onclick="event.stopPropagation(); checkAvailability('roam')" class="bg-white hover:bg-neutral-200 text-black font-bold px-6 py-3 rounded-xl text-sm transition whitespace-nowrap shadow-md cursor-pointer">
+                                Check Availability
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <!-- HARDWARE SPECS -->
-    <section id="specs" class="bg-starlinkCard border-y border-neutral-800 py-20 px-4 sm:px-6">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6">
-                <span class="text-xs font-bold text-starlinkGray uppercase tracking-widest">Hardware Engineering</span>
-                <h2 class="text-3xl sm:text-4xl font-black tracking-tight">Designed to withstand the elements.</h2>
-                <p class="text-starlinkGray text-sm sm:text-base leading-relaxed">
-                    Starlink hardware is self-orienting and designed to install in minutes. It can withstand extreme cold, heat, hail, sleet, heavy rain, and gale-force winds.
+
+    <!-- SECTION 2: ROAM PLANS GRID -->
+    <section class="bg-black py-16 sm:py-24 px-4 sm:px-8 border-t border-neutral-900">
+        <div class="max-w-7xl mx-auto space-y-12">
+            
+            <!-- Feature Checklist Bar -->
+            <div class="flex flex-wrap justify-center items-center gap-6 sm:gap-12 text-xs sm:text-sm font-medium text-neutral-200">
+                <span class="flex items-center gap-2">✓ Plug & Play Setup</span>
+                <span class="flex items-center gap-2">✓ In-motion Use</span>
+                <span class="flex items-center gap-2">✓ Pause Anytime with Standby Mode</span>
+                <span class="flex items-center gap-2">✓ 30-Day Trial</span>
+            </div>
+
+            <!-- 3-Column Plan Pricing Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- PLAN 1: Roam - 100GB -->
+                <div class="bg-starlinkCard border border-neutral-800/80 rounded-2xl p-8 flex flex-col justify-between hover:border-neutral-700 transition duration-300">
+                    <div class="space-y-4">
+                        <h3 class="text-xl sm:text-2xl font-black text-white">Roam - 100GB</h3>
+                        <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed min-h-[70px]">
+                            Up to 300+ Mbps for approximately 1 week of typical use. Reliable connectivity for occasional trips, camping, and getaways. Get unlimited low-speed data after using your Roam data.
+                        </p>
+                    </div>
+                    <div class="pt-8 border-t border-neutral-800/60 mt-8 space-y-4">
+                        <div>
+                            <span class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest block">SERVICE STARTING AT</span>
+                            <span class="text-3xl sm:text-4xl font-black text-white">$55<span class="text-sm font-normal text-neutral-400">/mo</span></span>
+                        </div>
+                        <a href="tel:+448009871212" class="block w-full bg-white hover:bg-neutral-200 text-black font-bold py-3 rounded-xl text-xs sm:text-sm text-center transition shadow-md">
+                            📞 Call 0800 987 1212
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PLAN 2: Roam - 300GB -->
+                <div class="bg-starlinkCard border border-neutral-800/80 rounded-2xl p-8 flex flex-col justify-between hover:border-neutral-700 transition duration-300">
+                    <div class="space-y-4">
+                        <h3 class="text-xl sm:text-2xl font-black text-white">Roam - 300GB</h3>
+                        <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed min-h-[70px]">
+                            Up to 300+ Mbps. Reliable connectivity for regular travelers with multiple trips a month. Get unlimited low-speed data after using your Roam data.
+                        </p>
+                    </div>
+                    <div class="pt-8 border-t border-neutral-800/60 mt-8 space-y-4">
+                        <div>
+                            <span class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest block">SERVICE STARTING AT</span>
+                            <span class="text-3xl sm:text-4xl font-black text-white">$80<span class="text-sm font-normal text-neutral-400">/mo</span></span>
+                        </div>
+                        <a href="tel:+448009871212" class="block w-full bg-white hover:bg-neutral-200 text-black font-bold py-3 rounded-xl text-xs sm:text-sm text-center transition shadow-md">
+                            📞 Call 0800 987 1212
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PLAN 3: Roam - Unlimited -->
+                <div class="bg-starlinkCard border border-neutral-800/80 rounded-2xl p-8 flex flex-col justify-between hover:border-neutral-700 transition duration-300">
+                    <div class="space-y-4">
+                        <h3 class="text-xl sm:text-2xl font-black text-white">Roam - Unlimited</h3>
+                        <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed min-h-[70px]">
+                            Up to 300+ Mbps. Our best performing internet on the go with unlimited high-speed data. Includes international travel within 160+ countries and territories.
+                        </p>
+                    </div>
+                    <div class="pt-8 border-t border-neutral-800/60 mt-8 space-y-4">
+                        <div>
+                            <span class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest block">SERVICE STARTING AT</span>
+                            <span class="text-3xl sm:text-4xl font-black text-white">$175<span class="text-sm font-normal text-neutral-400">/mo</span></span>
+                        </div>
+                        <a href="tel:+448009871212" class="block w-full bg-white hover:bg-neutral-200 text-black font-bold py-3 rounded-xl text-xs sm:text-sm text-center transition shadow-md">
+                            📞 Call 0800 987 1212
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Disclaimer Footnote -->
+            <div class="text-center space-y-2 text-[11px] sm:text-xs text-neutral-500 max-w-5xl mx-auto leading-relaxed pt-4">
+                <p>
+                    Users on Roam 100 GB and Roam 300 GB receive an allotment of high-speed data, then unlimited low-speed data. For limitations on international travel, coastal coverage and in-motion use, see FAQ <a href="#" class="underline text-neutral-300">here</a>. Standby Mode allows for emergency messaging and easy reactivation in dead zones for a small monthly fee.
                 </p>
-                <div class="grid grid-cols-2 gap-6 pt-4">
-                    <div>
-                        <p class="text-2xl font-black">Weatherproof</p>
-                        <p class="text-xs text-starlinkGray mt-1">IP56 rated for extreme climates</p>
-                    </div>
-                    <div>
-                        <p class="text-2xl font-black">Easy Setup</p>
-                        <p class="text-xs text-starlinkGray mt-1">Plug-in and point to the sky</p>
-                    </div>
-                </div>
+                <p>
+                    Speeds referenced are maximum available speeds, are not guaranteed, and will be slower during times of congestion.
+                </p>
             </div>
-            <div class="bg-black border border-neutral-800 rounded-3xl p-8 text-center space-y-6">
-                <div class="w-16 h-16 bg-neutral-900 border border-neutral-800 text-white rounded-2xl flex items-center justify-center mx-auto text-2xl">
-                    🛰️
-                </div>
-                <h3 class="text-xl font-bold">Ready to get connected?</h3>
-                <p class="text-xs text-starlinkGray">Speak with an authorized support agent to check coverage at your exact location and place your hardware order.</p>
-                <a href="tel:+448009871212" class="block w-full bg-white hover:bg-neutral-200 text-black font-bold py-4 rounded-xl text-sm transition">
-                    📞 Call 0800 987 1212
-                </a>
-            </div>
+
         </div>
     </section>
+
+
+    <!-- SECTION 3: CUSTOMER REVIEWS WITH WIREFRAME PATTERN -->
+    <section class="relative bg-black py-24 sm:py-32 px-4 sm:px-8 border-t border-neutral-900 overflow-hidden">
+        
+        <!-- SVG Wireframe Orbital Pattern Background -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-25">
+            <svg width="900" height="900" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[700px] h-[700px] sm:w-[900px] sm:h-[900px]">
+                <!-- Concentric tilted orbital rings -->
+                <ellipse cx="400" cy="400" rx="380" ry="140" stroke="white" stroke-width="1" transform="rotate(-25 400 400)" />
+                <ellipse cx="400" cy="400" rx="360" ry="130" stroke="white" stroke-width="1" transform="rotate(-20 400 400)" />
+                <ellipse cx="400" cy="400" rx="340" ry="120" stroke="white" stroke-width="1" transform="rotate(-15 400 400)" />
+                <ellipse cx="400" cy="400" rx="320" ry="110" stroke="white" stroke-width="1" transform="rotate(-10 400 400)" />
+                <ellipse cx="400" cy="400" rx="300" ry="100" stroke="white" stroke-width="1" transform="rotate(-5 400 400)" />
+                <ellipse cx="400" cy="400" rx="280" ry="90" stroke="white" stroke-width="1" transform="rotate(0 400 400)" />
+                <ellipse cx="400" cy="400" rx="260" ry="80" stroke="white" stroke-width="1" transform="rotate(5 400 400)" />
+                <ellipse cx="400" cy="400" rx="240" ry="70" stroke="white" stroke-width="1" transform="rotate(10 400 400)" />
+                <ellipse cx="400" cy="400" rx="220" ry="60" stroke="white" stroke-width="1" transform="rotate(15 400 400)" />
+                <ellipse cx="400" cy="400" rx="200" ry="50" stroke="white" stroke-width="1" transform="rotate(20 400 400)" />
+                <ellipse cx="400" cy="400" rx="180" ry="40" stroke="white" stroke-width="1" transform="rotate(25 400 400)" />
+                <!-- Transverse latitude rings -->
+                <ellipse cx="400" cy="400" rx="150" ry="360" stroke="white" stroke-width="1" transform="rotate(15 400 400)" />
+                <ellipse cx="400" cy="400" rx="130" ry="340" stroke="white" stroke-width="1" transform="rotate(25 400 400)" />
+                <ellipse cx="400" cy="400" rx="110" ry="320" stroke="white" stroke-width="1" transform="rotate(35 400 400)" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10 space-y-16">
+            
+            <!-- Section Header -->
+            <h2 class="text-3xl sm:text-5xl font-black text-center text-white tracking-tight">
+                What our customers say
+            </h2>
+
+            <!-- Testimonials 3-Column Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12">
+                
+                <!-- Review 1 -->
+                <div class="space-y-4 text-center md:text-left">
+                    <h3 class="text-lg sm:text-xl font-bold text-white tracking-tight">
+                        Connected all through Alaska
+                    </h3>
+                    <p class="text-xs sm:text-sm italic text-neutral-300 leading-relaxed">
+                        "Just completed a bucket list road trip from Southern California to Alaska via the Alcan Hwy. We were connected all the way through and back through rain, snow, and shine for safety, entertainment, and business. Awesome feeling."
+                    </p>
+                    <p class="text-xs font-medium text-neutral-500 pt-2">
+                        — Charles D., California, USA
+                    </p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="space-y-4 text-center md:text-left">
+                    <h3 class="text-lg sm:text-xl font-bold text-white tracking-tight">
+                        A lifesaver for RV travel
+                    </h3>
+                    <p class="text-xs sm:text-sm italic text-neutral-300 leading-relaxed">
+                        "Have just started RV travel, particularly in Queensland. There are many areas, both in cities, towns and rural areas where phone 4G/5G is completely absent. Starlink has been a godsend, even operating whilst driving. Very impressed!"
+                    </p>
+                    <p class="text-xs font-medium text-neutral-500 pt-2">
+                        — Irene K., Queensland, Australia
+                    </p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="space-y-4 text-center md:text-left">
+                    <h3 class="text-lg sm:text-xl font-bold text-white tracking-tight">
+                        Safe on the road in Brazil
+                    </h3>
+                    <p class="text-xs sm:text-sm italic text-neutral-300 leading-relaxed">
+                        "Starlink is now a must-have item for anyone who travels like me. Before, I was always afraid of being stranded if my vehicle broke down. Today, thanks to Starlink, I feel much safer."
+                    </p>
+                    <p class="text-xs font-medium text-neutral-500 pt-2">
+                        — Rubens Costa D., Porto Alegre, Brazil
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
 
     <!-- FOOTER -->
     <footer class="bg-starlinkDark text-starlinkGray py-12 text-xs border-t border-neutral-900">
@@ -210,7 +311,7 @@
             </div>
             <span class="text-xs font-bold text-neutral-400 uppercase tracking-widest">Availability Check</span>
             <h3 class="text-xl sm:text-2xl font-black mt-2 mb-3">
-                Zip Code Verified
+                Service Available
             </h3>
             <p class="text-xs sm:text-sm text-starlinkGray mb-6">
                 The services are available in your zip code. Please call to get further assistance.
@@ -224,12 +325,43 @@
         </div>
     </div>
 
-    <!-- SCRIPT -->
+    <!-- SCRIPTS -->
     <script>
-        function checkZipCode() {
-            const input = document.getElementById('zip-input');
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 20) {
+                header.classList.add('bg-starlinkDark/90', 'backdrop-blur-md', 'border-b', 'border-neutral-800', 'shadow-lg');
+            } else {
+                header.classList.remove('bg-starlinkDark/90', 'backdrop-blur-md', 'border-b', 'border-neutral-800', 'shadow-lg');
+            }
+        });
+
+        // Toggle 70/30 Width Logic
+        function switchTab(tab) {
+            const cardHome = document.getElementById('card-home');
+            const cardRoam = document.getElementById('card-roam');
+            const contentHome = document.getElementById('content-home');
+            const contentRoam = document.getElementById('content-roam');
+
+            if (tab === 'home') {
+                cardHome.className = "cursor-pointer transition-all duration-500 ease-in-out rounded-3xl p-10 sm:p-12 border backdrop-blur-md flex flex-col justify-between bg-neutral-900/65 border-neutral-700/60 shadow-2xl w-full lg:w-[70%] min-h-[380px] sm:min-h-[420px] opacity-100";
+                cardRoam.className = "cursor-pointer transition-all duration-500 ease-in-out rounded-3xl p-10 sm:p-12 border backdrop-blur-md flex flex-col justify-between bg-neutral-900/30 border-neutral-800/60 opacity-80 hover:opacity-100 shadow-xl w-full lg:w-[30%] min-h-[380px] sm:min-h-[420px]";
+                contentHome.classList.remove('hidden');
+                contentRoam.classList.add('hidden');
+            } else {
+                cardRoam.className = "cursor-pointer transition-all duration-500 ease-in-out rounded-3xl p-10 sm:p-12 border backdrop-blur-md flex flex-col justify-between bg-neutral-900/65 border-neutral-700/60 shadow-2xl w-full lg:w-[70%] min-h-[380px] sm:min-h-[420px] opacity-100";
+                cardHome.className = "cursor-pointer transition-all duration-500 ease-in-out rounded-3xl p-10 sm:p-12 border backdrop-blur-md flex flex-col justify-between bg-neutral-900/30 border-neutral-800/60 opacity-80 hover:opacity-100 shadow-xl w-full lg:w-[30%] min-h-[380px] sm:min-h-[420px]";
+                contentRoam.classList.remove('hidden');
+                contentHome.classList.add('hidden');
+            }
+        }
+
+        // Availability popup logic
+        function checkAvailability(type) {
+            const input = document.getElementById(`zip-${type}`);
             if (input && input.value.trim() === "") {
-                alert("Please enter your zip code first.");
+                alert("Please enter your address or zip code first.");
                 input.focus();
                 return;
             }
