@@ -27,84 +27,87 @@
 </head>
 <body class="bg-starlinkDark text-starlinkAccent font-sans antialiased selection:bg-white selection:text-black">
 
-    <!-- HEADER / NAVBAR (Section 1) -->
-    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-4">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
+    <!-- DYNAMIC SCROLL HEADER -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent pt-6 pb-4">
+        <div class="max-w-[1400px] mx-auto px-8 sm:px-16 flex justify-between items-center">
             <div class="flex items-center gap-8">
-                <!-- Brand Logo -->
-                <a href="#" class="text-xl sm:text-2xl font-black tracking-widest uppercase text-white">STARLINK</a>
+                <!-- Brand Logo + Authorized Reseller Badge -->
+                <a href="#" class="flex flex-col leading-none">
+                    <span class="text-xl sm:text-2xl font-black tracking-widest uppercase text-white">STARLINK</span>
+                    <span class="text-[7px] sm:text-[9px] text-neutral-400 tracking-[0.25em] font-semibold uppercase mt-0.5">Authorized Reseller</span>
+                </a>
                 <!-- Nav Links -->
-                <nav class="hidden lg:flex items-center gap-6 text-xs font-medium text-neutral-300">
-                    <a href="#" class="hover:text-white transition">Personal</a>
-                    <a href="#" class="hover:text-white transition">Business</a>
-                    <a href="#" class="hover:text-white transition">Learn</a>
-                    <a href="#" class="hover:text-white transition">Support</a>
-                    <a href="#" class="hover:text-white transition">Company</a>
+                <nav class="hidden lg:flex items-center gap-6 text-xs font-semibold text-neutral-200">
+                    <a href="#" class="bg-white/10 px-3 py-1.5 rounded-md hover:bg-white/20 transition">Personal ▾</a>
+                    <a href="#" class="hover:text-white transition">Business ▾</a>
+                    <a href="#" class="hover:text-white transition">Learn ▾</a>
+                    <a href="#" class="hover:text-white transition">Support ▾</a>
+                    <a href="#" class="hover:text-white transition">Company ▾</a>
                     <a href="#" class="hover:text-white transition">Shop</a>
                 </nav>
             </div>
             <div class="flex items-center gap-4">
-                <a href="tel:+448009871212" class="text-xs font-semibold text-white hover:text-neutral-300 transition whitespace-nowrap">
+                <a href="tel:+448009871212" class="text-xs font-bold text-white hover:text-neutral-300 transition whitespace-nowrap">
                     Call 0800 987 1212
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- HERO SECTION (Section 1) -->
-    <section class="relative min-h-screen flex flex-col justify-end px-4 sm:px-12 pb-16 pt-28 bg-cover bg-center bg-no-repeat overflow-hidden" 
+    <!-- HERO SECTION WITH MATCHED MARGINS AND BOX PROPORTIONS -->
+    <section class="relative min-h-screen flex flex-col justify-end px-8 sm:px-16 pb-20 pt-36 bg-cover bg-center bg-no-repeat overflow-hidden" 
              style="background-image: url('starlink-BG.png');">
         
         <!-- Dark Gradient Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent pointer-events-none"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent pointer-events-none"></div>
 
-        <div class="max-w-7xl w-full mx-auto relative z-10 space-y-6">
+        <div class="max-w-[1400px] w-full mx-auto relative z-10 space-y-7">
             
             <!-- Headline -->
-            <h1 class="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-white">
+            <h1 class="text-4xl sm:text-5xl md:text-[56px] font-extrabold tracking-tight text-white leading-tight">
                 Fast, affordable internet
             </h1>
 
-            <!-- Dynamic 70/30 Toggle Cards -->
-            <div class="flex flex-col lg:flex-row gap-6 max-w-6xl w-full items-stretch">
+            <!-- Dynamic 70/30 Toggle Cards Grid -->
+            <div class="flex flex-col lg:flex-row gap-5 max-w-4xl w-full items-stretch">
                 
                 <!-- CARD 1: AT HOME -->
-                <div id="card-home" onclick="switchTab('home')" class="cursor-pointer transition-all duration-500 ease-in-out rounded-3xl p-10 sm:p-12 border backdrop-blur-md flex flex-col justify-between bg-neutral-900/65 border-neutral-700/60 shadow-2xl w-full lg:w-[70%] min-h-[380px] sm:min-h-[420px]">
+                <div id="card-home" onclick="switchTab('home')" class="cursor-pointer transition-all duration-500 ease-in-out rounded-2xl p-8 sm:p-9 border backdrop-blur-md flex flex-col justify-between bg-neutral-900/60 border-neutral-500/60 shadow-2xl w-full lg:w-[68%] min-h-[360px] sm:min-h-[380px]">
                     <div>
-                        <h3 class="text-2xl sm:text-3xl font-black text-white">At Home</h3>
-                        <p class="text-sm text-neutral-300 mt-2">Reliable, high-speed home internet.</p>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white">At Home</h3>
+                        <p class="text-xs sm:text-sm text-neutral-300 mt-2 font-normal">Reliable, high-speed home internet.</p>
                     </div>
 
-                    <div id="content-home" class="mt-8 transition-all duration-300">
-                        <div class="mb-6">
-                            <span class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest block">Residential Starting At</span>
-                            <span class="text-4xl font-black text-white">$55<span class="text-sm font-normal text-neutral-400">/mo</span></span>
+                    <div id="content-home" class="mt-8 transition-all duration-300 space-y-6">
+                        <div>
+                            <span class="text-[9px] font-bold text-neutral-300 uppercase tracking-widest block">RESIDENTIAL STARTING AT</span>
+                            <span class="text-4xl font-black text-white mt-1 block">$55<span class="text-sm font-normal text-neutral-300">/mo</span></span>
                         </div>
                         <div class="flex flex-col sm:flex-row gap-3">
-                            <input type="text" id="zip-home" placeholder="Address or Zip Code" class="bg-black/60 border border-neutral-700 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-400 focus:outline-none focus:border-white flex-grow" onclick="event.stopPropagation()">
-                            <button onclick="event.stopPropagation(); checkAvailability('home')" class="bg-white hover:bg-neutral-200 text-black font-bold px-6 py-3 rounded-xl text-sm transition whitespace-nowrap shadow-md cursor-pointer">
-                                Check Availability
+                            <input type="text" id="zip-home" placeholder="Address" class="bg-black/50 border border-neutral-600 rounded-xl px-4 py-3 text-xs sm:text-sm text-white placeholder-neutral-400 focus:outline-none focus:border-white flex-grow" onclick="event.stopPropagation()">
+                            <button onclick="event.stopPropagation(); checkAvailability('home')" class="bg-white hover:bg-neutral-200 text-black font-bold px-6 py-3 rounded-xl text-xs sm:text-sm transition whitespace-nowrap shadow-md cursor-pointer">
+                                Get Started
                             </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- CARD 2: ON THE GO -->
-                <div id="card-roam" onclick="switchTab('roam')" class="cursor-pointer transition-all duration-500 ease-in-out rounded-3xl p-10 sm:p-12 border backdrop-blur-md flex flex-col justify-between bg-neutral-900/30 border-neutral-800/60 opacity-80 hover:opacity-100 shadow-xl w-full lg:w-[30%] min-h-[380px] sm:min-h-[420px]">
+                <div id="card-roam" onclick="switchTab('roam')" class="cursor-pointer transition-all duration-500 ease-in-out rounded-2xl p-8 sm:p-9 border backdrop-blur-md flex flex-col justify-between bg-neutral-900/35 border-neutral-800/60 opacity-80 hover:opacity-100 shadow-xl w-full lg:w-[32%] min-h-[360px] sm:min-h-[380px]">
                     <div>
-                        <h3 class="text-2xl sm:text-3xl font-black text-white">On the Go</h3>
-                        <p class="text-sm text-neutral-300 mt-2">Fast, reliable internet for travel, camping, boating, and more.</p>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white">On the Go</h3>
+                        <p class="text-xs sm:text-sm text-neutral-300 mt-2 font-normal">Fast, reliable internet for travel, camping, boating, and more.</p>
                     </div>
 
-                    <div id="content-roam" class="mt-8 transition-all duration-300 hidden">
-                        <div class="mb-6">
-                            <span class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest block">Roam Starting At</span>
-                            <span class="text-4xl font-black text-white">$55<span class="text-sm font-normal text-neutral-400">/mo</span></span>
+                    <div id="content-roam" class="mt-8 transition-all duration-300 space-y-6 hidden">
+                        <div>
+                            <span class="text-[9px] font-bold text-neutral-300 uppercase tracking-widest block">ROAM STARTING AT</span>
+                            <span class="text-4xl font-black text-white mt-1 block">$55<span class="text-sm font-normal text-neutral-300">/mo</span></span>
                         </div>
                         <div class="flex flex-col sm:flex-row gap-3">
-                            <input type="text" id="zip-roam" placeholder="Address or Zip Code" class="bg-black/60 border border-neutral-700 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-400 focus:outline-none focus:border-white flex-grow" onclick="event.stopPropagation()">
-                            <button onclick="event.stopPropagation(); checkAvailability('roam')" class="bg-white hover:bg-neutral-200 text-black font-bold px-6 py-3 rounded-xl text-sm transition whitespace-nowrap shadow-md cursor-pointer">
-                                Check Availability
+                            <input type="text" id="zip-roam" placeholder="Address" class="bg-black/50 border border-neutral-600 rounded-xl px-4 py-3 text-xs sm:text-sm text-white placeholder-neutral-400 focus:outline-none focus:border-white flex-grow" onclick="event.stopPropagation()">
+                            <button onclick="event.stopPropagation(); checkAvailability('roam')" class="bg-white hover:bg-neutral-200 text-black font-bold px-6 py-3 rounded-xl text-xs sm:text-sm transition whitespace-nowrap shadow-md cursor-pointer">
+                                Get Started
                             </button>
                         </div>
                     </div>
@@ -116,11 +119,11 @@
 
 
     <!-- SECTION 2: ROAM PLANS GRID -->
-    <section class="bg-black py-16 sm:py-24 px-4 sm:px-8 border-t border-neutral-900">
-        <div class="max-w-7xl mx-auto space-y-12">
+    <section class="bg-black py-16 sm:py-20 px-4 sm:px-8 border-t border-neutral-900">
+        <div class="max-w-7xl mx-auto space-y-10">
             
             <!-- Feature Checklist Bar -->
-            <div class="flex flex-wrap justify-center items-center gap-6 sm:gap-12 text-xs sm:text-sm font-medium text-neutral-200">
+            <div class="flex flex-wrap justify-center items-center gap-6 sm:gap-10 text-xs sm:text-sm font-medium text-neutral-200">
                 <span class="flex items-center gap-2">✓ Plug & Play Setup</span>
                 <span class="flex items-center gap-2">✓ In-motion Use</span>
                 <span class="flex items-center gap-2">✓ Pause Anytime with Standby Mode</span>
@@ -131,57 +134,57 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
                 <!-- PLAN 1: Roam - 100GB -->
-                <div class="bg-starlinkCard border border-neutral-800/80 rounded-2xl p-8 flex flex-col justify-between hover:border-neutral-700 transition duration-300">
-                    <div class="space-y-4">
-                        <h3 class="text-xl sm:text-2xl font-black text-white">Roam - 100GB</h3>
-                        <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed min-h-[70px]">
+                <div class="bg-starlinkCard border border-neutral-800/80 rounded-2xl p-7 flex flex-col justify-between hover:border-neutral-700 transition duration-300">
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-bold text-white">Roam - 100GB</h3>
+                        <p class="text-xs text-neutral-400 leading-relaxed min-h-[60px]">
                             Up to 300+ Mbps for approximately 1 week of typical use. Reliable connectivity for occasional trips, camping, and getaways. Get unlimited low-speed data after using your Roam data.
                         </p>
                     </div>
-                    <div class="pt-8 border-t border-neutral-800/60 mt-8 space-y-4">
+                    <div class="pt-6 border-t border-neutral-800/60 mt-6 space-y-4">
                         <div>
-                            <span class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest block">SERVICE STARTING AT</span>
-                            <span class="text-3xl sm:text-4xl font-black text-white">$55<span class="text-sm font-normal text-neutral-400">/mo</span></span>
+                            <span class="text-[9px] font-bold text-neutral-400 uppercase tracking-widest block">SERVICE STARTING AT</span>
+                            <span class="text-3xl font-black text-white">$55<span class="text-xs font-normal text-neutral-400">/mo</span></span>
                         </div>
-                        <a href="tel:+448009871212" class="block w-full bg-white hover:bg-neutral-200 text-black font-bold py-3 rounded-xl text-xs sm:text-sm text-center transition shadow-md">
+                        <a href="tel:+448009871212" class="block w-full bg-white hover:bg-neutral-200 text-black font-bold py-2.5 rounded-xl text-xs text-center transition shadow-md">
                             📞 Call 0800 987 1212
                         </a>
                     </div>
                 </div>
 
                 <!-- PLAN 2: Roam - 300GB -->
-                <div class="bg-starlinkCard border border-neutral-800/80 rounded-2xl p-8 flex flex-col justify-between hover:border-neutral-700 transition duration-300">
-                    <div class="space-y-4">
-                        <h3 class="text-xl sm:text-2xl font-black text-white">Roam - 300GB</h3>
-                        <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed min-h-[70px]">
+                <div class="bg-starlinkCard border border-neutral-800/80 rounded-2xl p-7 flex flex-col justify-between hover:border-neutral-700 transition duration-300">
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-bold text-white">Roam - 300GB</h3>
+                        <p class="text-xs text-neutral-400 leading-relaxed min-h-[60px]">
                             Up to 300+ Mbps. Reliable connectivity for regular travelers with multiple trips a month. Get unlimited low-speed data after using your Roam data.
                         </p>
                     </div>
-                    <div class="pt-8 border-t border-neutral-800/60 mt-8 space-y-4">
+                    <div class="pt-6 border-t border-neutral-800/60 mt-6 space-y-4">
                         <div>
-                            <span class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest block">SERVICE STARTING AT</span>
-                            <span class="text-3xl sm:text-4xl font-black text-white">$80<span class="text-sm font-normal text-neutral-400">/mo</span></span>
+                            <span class="text-[9px] font-bold text-neutral-400 uppercase tracking-widest block">SERVICE STARTING AT</span>
+                            <span class="text-3xl font-black text-white">$80<span class="text-xs font-normal text-neutral-400">/mo</span></span>
                         </div>
-                        <a href="tel:+448009871212" class="block w-full bg-white hover:bg-neutral-200 text-black font-bold py-3 rounded-xl text-xs sm:text-sm text-center transition shadow-md">
+                        <a href="tel:+448009871212" class="block w-full bg-white hover:bg-neutral-200 text-black font-bold py-2.5 rounded-xl text-xs text-center transition shadow-md">
                             📞 Call 0800 987 1212
                         </a>
                     </div>
                 </div>
 
                 <!-- PLAN 3: Roam - Unlimited -->
-                <div class="bg-starlinkCard border border-neutral-800/80 rounded-2xl p-8 flex flex-col justify-between hover:border-neutral-700 transition duration-300">
-                    <div class="space-y-4">
-                        <h3 class="text-xl sm:text-2xl font-black text-white">Roam - Unlimited</h3>
-                        <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed min-h-[70px]">
+                <div class="bg-starlinkCard border border-neutral-800/80 rounded-2xl p-7 flex flex-col justify-between hover:border-neutral-700 transition duration-300">
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-bold text-white">Roam - Unlimited</h3>
+                        <p class="text-xs text-neutral-400 leading-relaxed min-h-[60px]">
                             Up to 300+ Mbps. Our best performing internet on the go with unlimited high-speed data. Includes international travel within 160+ countries and territories.
                         </p>
                     </div>
-                    <div class="pt-8 border-t border-neutral-800/60 mt-8 space-y-4">
+                    <div class="pt-6 border-t border-neutral-800/60 mt-6 space-y-4">
                         <div>
-                            <span class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest block">SERVICE STARTING AT</span>
-                            <span class="text-3xl sm:text-4xl font-black text-white">$175<span class="text-sm font-normal text-neutral-400">/mo</span></span>
+                            <span class="text-[9px] font-bold text-neutral-400 uppercase tracking-widest block">SERVICE STARTING AT</span>
+                            <span class="text-3xl font-black text-white">$175<span class="text-xs font-normal text-neutral-400">/mo</span></span>
                         </div>
-                        <a href="tel:+448009871212" class="block w-full bg-white hover:bg-neutral-200 text-black font-bold py-3 rounded-xl text-xs sm:text-sm text-center transition shadow-md">
+                        <a href="tel:+448009871212" class="block w-full bg-white hover:bg-neutral-200 text-black font-bold py-2.5 rounded-xl text-xs text-center transition shadow-md">
                             📞 Call 0800 987 1212
                         </a>
                     </div>
@@ -190,7 +193,7 @@
             </div>
 
             <!-- Disclaimer Footnote -->
-            <div class="text-center space-y-2 text-[11px] sm:text-xs text-neutral-500 max-w-5xl mx-auto leading-relaxed pt-4">
+            <div class="text-center space-y-2 text-[10px] sm:text-xs text-neutral-500 max-w-5xl mx-auto leading-relaxed pt-2">
                 <p>
                     Users on Roam 100 GB and Roam 300 GB receive an allotment of high-speed data, then unlimited low-speed data. For limitations on international travel, coastal coverage and in-motion use, see FAQ <a href="#" class="underline text-neutral-300">here</a>. Standby Mode allows for emergency messaging and easy reactivation in dead zones for a small monthly fee.
                 </p>
@@ -204,12 +207,11 @@
 
 
     <!-- SECTION 3: CUSTOMER REVIEWS WITH WIREFRAME PATTERN -->
-    <section class="relative bg-black py-24 sm:py-32 px-4 sm:px-8 border-t border-neutral-900 overflow-hidden">
+    <section class="relative bg-black py-20 sm:py-28 px-4 sm:px-8 border-t border-neutral-900 overflow-hidden">
         
         <!-- SVG Wireframe Orbital Pattern Background -->
-        <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-25">
-            <svg width="900" height="900" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[700px] h-[700px] sm:w-[900px] sm:h-[900px]">
-                <!-- Concentric tilted orbital rings -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
+            <svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[600px] h-[600px] sm:w-[800px] sm:h-[800px]">
                 <ellipse cx="400" cy="400" rx="380" ry="140" stroke="white" stroke-width="1" transform="rotate(-25 400 400)" />
                 <ellipse cx="400" cy="400" rx="360" ry="130" stroke="white" stroke-width="1" transform="rotate(-20 400 400)" />
                 <ellipse cx="400" cy="400" rx="340" ry="120" stroke="white" stroke-width="1" transform="rotate(-15 400 400)" />
@@ -221,58 +223,57 @@
                 <ellipse cx="400" cy="400" rx="220" ry="60" stroke="white" stroke-width="1" transform="rotate(15 400 400)" />
                 <ellipse cx="400" cy="400" rx="200" ry="50" stroke="white" stroke-width="1" transform="rotate(20 400 400)" />
                 <ellipse cx="400" cy="400" rx="180" ry="40" stroke="white" stroke-width="1" transform="rotate(25 400 400)" />
-                <!-- Transverse latitude rings -->
                 <ellipse cx="400" cy="400" rx="150" ry="360" stroke="white" stroke-width="1" transform="rotate(15 400 400)" />
                 <ellipse cx="400" cy="400" rx="130" ry="340" stroke="white" stroke-width="1" transform="rotate(25 400 400)" />
                 <ellipse cx="400" cy="400" rx="110" ry="320" stroke="white" stroke-width="1" transform="rotate(35 400 400)" />
             </svg>
         </div>
 
-        <div class="max-w-7xl mx-auto relative z-10 space-y-16">
+        <div class="max-w-7xl mx-auto relative z-10 space-y-12">
             
             <!-- Section Header -->
-            <h2 class="text-3xl sm:text-5xl font-black text-center text-white tracking-tight">
+            <h2 class="text-2xl sm:text-4xl font-bold text-center text-white tracking-tight">
                 What our customers say
             </h2>
 
             <!-- Testimonials 3-Column Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
                 
                 <!-- Review 1 -->
-                <div class="space-y-4 text-center md:text-left">
-                    <h3 class="text-lg sm:text-xl font-bold text-white tracking-tight">
+                <div class="space-y-3 text-center md:text-left">
+                    <h3 class="text-base sm:text-lg font-bold text-white tracking-tight">
                         Connected all through Alaska
                     </h3>
                     <p class="text-xs sm:text-sm italic text-neutral-300 leading-relaxed">
                         "Just completed a bucket list road trip from Southern California to Alaska via the Alcan Hwy. We were connected all the way through and back through rain, snow, and shine for safety, entertainment, and business. Awesome feeling."
                     </p>
-                    <p class="text-xs font-medium text-neutral-500 pt-2">
+                    <p class="text-[11px] font-medium text-neutral-500 pt-1">
                         — Charles D., California, USA
                     </p>
                 </div>
 
                 <!-- Review 2 -->
-                <div class="space-y-4 text-center md:text-left">
-                    <h3 class="text-lg sm:text-xl font-bold text-white tracking-tight">
+                <div class="space-y-3 text-center md:text-left">
+                    <h3 class="text-base sm:text-lg font-bold text-white tracking-tight">
                         A lifesaver for RV travel
                     </h3>
                     <p class="text-xs sm:text-sm italic text-neutral-300 leading-relaxed">
                         "Have just started RV travel, particularly in Queensland. There are many areas, both in cities, towns and rural areas where phone 4G/5G is completely absent. Starlink has been a godsend, even operating whilst driving. Very impressed!"
                     </p>
-                    <p class="text-xs font-medium text-neutral-500 pt-2">
+                    <p class="text-[11px] font-medium text-neutral-500 pt-1">
                         — Irene K., Queensland, Australia
                     </p>
                 </div>
 
                 <!-- Review 3 -->
-                <div class="space-y-4 text-center md:text-left">
-                    <h3 class="text-lg sm:text-xl font-bold text-white tracking-tight">
+                <div class="space-y-3 text-center md:text-left">
+                    <h3 class="text-base sm:text-lg font-bold text-white tracking-tight">
                         Safe on the road in Brazil
                     </h3>
                     <p class="text-xs sm:text-sm italic text-neutral-300 leading-relaxed">
                         "Starlink is now a must-have item for anyone who travels like me. Before, I was always afraid of being stranded if my vehicle broke down. Today, thanks to Starlink, I feel much safer."
                     </p>
-                    <p class="text-xs font-medium text-neutral-500 pt-2">
+                    <p class="text-[11px] font-medium text-neutral-500 pt-1">
                         — Rubens Costa D., Porto Alegre, Brazil
                     </p>
                 </div>
@@ -345,13 +346,13 @@
             const contentRoam = document.getElementById('content-roam');
 
             if (tab === 'home') {
-                cardHome.className = "cursor-pointer transition-all duration-500 ease-in-out rounded-3xl p-10 sm:p-12 border backdrop-blur-md flex flex-col justify-between bg-neutral-900/65 border-neutral-700/60 shadow-2xl w-full lg:w-[70%] min-h-[380px] sm:min-h-[420px] opacity-100";
-                cardRoam.className = "cursor-pointer transition-all duration-500 ease-in-out rounded-3xl p-10 sm:p-12 border backdrop-blur-md flex flex-col justify-between bg-neutral-900/30 border-neutral-800/60 opacity-80 hover:opacity-100 shadow-xl w-full lg:w-[30%] min-h-[380px] sm:min-h-[420px]";
+                cardHome.className = "cursor-pointer transition-all duration-500 ease-in-out rounded-2xl p-8 sm:p-9 border backdrop-blur-md flex flex-col justify-between bg-neutral-900/60 border-neutral-500/60 shadow-2xl w-full lg:w-[68%] min-h-[360px] sm:min-h-[380px] opacity-100";
+                cardRoam.className = "cursor-pointer transition-all duration-500 ease-in-out rounded-2xl p-8 sm:p-9 border backdrop-blur-md flex flex-col justify-between bg-neutral-900/35 border-neutral-800/60 opacity-80 hover:opacity-100 shadow-xl w-full lg:w-[32%] min-h-[360px] sm:min-h-[380px]";
                 contentHome.classList.remove('hidden');
                 contentRoam.classList.add('hidden');
             } else {
-                cardRoam.className = "cursor-pointer transition-all duration-500 ease-in-out rounded-3xl p-10 sm:p-12 border backdrop-blur-md flex flex-col justify-between bg-neutral-900/65 border-neutral-700/60 shadow-2xl w-full lg:w-[70%] min-h-[380px] sm:min-h-[420px] opacity-100";
-                cardHome.className = "cursor-pointer transition-all duration-500 ease-in-out rounded-3xl p-10 sm:p-12 border backdrop-blur-md flex flex-col justify-between bg-neutral-900/30 border-neutral-800/60 opacity-80 hover:opacity-100 shadow-xl w-full lg:w-[30%] min-h-[380px] sm:min-h-[420px]";
+                cardRoam.className = "cursor-pointer transition-all duration-500 ease-in-out rounded-2xl p-8 sm:p-9 border backdrop-blur-md flex flex-col justify-between bg-neutral-900/60 border-neutral-500/60 shadow-2xl w-full lg:w-[68%] min-h-[360px] sm:min-h-[380px] opacity-100";
+                cardHome.className = "cursor-pointer transition-all duration-500 ease-in-out rounded-2xl p-8 sm:p-9 border backdrop-blur-md flex flex-col justify-between bg-neutral-900/35 border-neutral-800/60 opacity-80 hover:opacity-100 shadow-xl w-full lg:w-[32%] min-h-[360px] sm:min-h-[380px]";
                 contentRoam.classList.remove('hidden');
                 contentHome.classList.add('hidden');
             }
