@@ -51,9 +51,9 @@
         </div>
     </header>
 
-    <!-- HERO SECTION WITH starlink-BG.png BACKGROUND -->
+    <!-- HERO SECTION WITH starlink-BG.jpg BACKGROUND -->
     <section class="relative min-h-[85vh] flex items-center justify-center text-center px-4 py-20 bg-cover bg-center bg-no-repeat overflow-hidden" 
-             style="background-image: url('starlink-BG.png');">
+             style="background-image: url('starlink-BG.jpg');">
         
         <!-- SEMI-TRANSPARENT OVERLAY FOR LEGIBILITY -->
         <div class="absolute inset-0 bg-slate-950/65 backdrop-blur-[2px]"></div>
@@ -69,12 +69,12 @@
                 High-speed, low-latency broadband engineered for remote locations, homes, vehicles, and enterprise networks. Order through our authorized dealer network today.
             </p>
 
-            <!-- ADDRESS CHECKER / ACTION BOX -->
+            <!-- ZIP CODE CHECKER BOX -->
             <div class="max-w-xl mx-auto bg-neutral-900/90 border border-neutral-700 p-3 sm:p-4 rounded-2xl shadow-2xl flex flex-col sm:flex-row gap-3 mt-8">
-                <input type="text" placeholder="Enter your service address or postcode..." class="bg-black/80 border border-neutral-700 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-400 focus:outline-none focus:border-white flex-grow">
-                <a href="tel:+448009871212" class="bg-white hover:bg-neutral-200 text-black font-bold px-6 py-3 rounded-xl text-sm transition whitespace-nowrap flex items-center justify-center gap-2 shadow-md">
-                    Check Availability
-                </a>
+                <input type="text" id="zip-input" placeholder="Enter your zip code..." class="bg-black/80 border border-neutral-700 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-400 focus:outline-none focus:border-white flex-grow">
+                <button onclick="checkZipCode()" class="bg-white hover:bg-neutral-200 text-black font-bold px-6 py-3 rounded-xl text-sm transition whitespace-nowrap flex items-center justify-center gap-2 shadow-md cursor-pointer">
+                    Check your zip code only
+                </button>
             </div>
         </div>
     </section>
@@ -201,41 +201,46 @@
         </div>
     </footer>
 
-    <!-- INSTANT CALL POP-UP MODAL -->
+    <!-- AVAILABILITY POP-UP MODAL -->
     <div id="support-popup" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="bg-starlinkCard border border-neutral-800 rounded-3xl max-w-md w-full p-6 sm:p-8 text-center relative shadow-2xl transform scale-95 transition-transform duration-300" id="popup-content">
             <button onclick="closePopup()" class="absolute top-4 right-4 text-neutral-400 hover:text-white font-bold text-xl p-2">&times;</button>
             <div class="w-12 h-12 bg-neutral-900 border border-neutral-800 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
-                📞
+                🛰️
             </div>
-            <span class="text-xs font-bold text-neutral-400 uppercase tracking-widest">Instant Assistance</span>
+            <span class="text-xs font-bold text-neutral-400 uppercase tracking-widest">Availability Check</span>
             <h3 class="text-xl sm:text-2xl font-black mt-2 mb-3">
-                Order Starlink with an Agent
+                Zip Code Verified
             </h3>
             <p class="text-xs sm:text-sm text-starlinkGray mb-6">
-                Want to confirm hardware availability, shipping timelines, or plan options? Call our dedicated support line now.
+                The services are available in your zip code. Please call to get further assistance.
             </p>
             <a href="tel:+448009871212" class="w-full bg-white hover:bg-neutral-200 text-black font-bold py-4 rounded-2xl text-sm sm:text-base transition shadow-lg flex items-center justify-center gap-2 mb-3">
                 📞 0800 987 1212
             </a>
-            <button onclick="closePopup()" class="text-xs text-neutral-500 hover:text-neutral-300 underline">
-                Continue browsing site
+            <button onclick="closePopup()" class="text-xs text-neutral-500 hover:text-neutral-300 underline cursor-pointer">
+                Close
             </button>
         </div>
     </div>
 
     <!-- SCRIPT -->
     <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                const popup = document.getElementById('support-popup');
-                const content = document.getElementById('popup-content');
-                if(popup && content) {
-                    popup.classList.remove('opacity-0', 'pointer-events-none');
-                    content.classList.remove('scale-95');
-                }
-            }, 2000);
-        });
+        function checkZipCode() {
+            const input = document.getElementById('zip-input');
+            if (input && input.value.trim() === "") {
+                alert("Please enter your zip code first.");
+                input.focus();
+                return;
+            }
+            const popup = document.getElementById('support-popup');
+            const content = document.getElementById('popup-content');
+            if(popup && content) {
+                popup.classList.remove('opacity-0', 'pointer-events-none');
+                content.classList.remove('scale-95');
+            }
+        }
+
         function closePopup() {
             const popup = document.getElementById('support-popup');
             const content = document.getElementById('popup-content');
